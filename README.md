@@ -31,10 +31,12 @@ To install packer manually, download the packer binary from "https://releases.ha
 ### Permissions
 Authenticating with Google Cloud services requires either a User Application Default Credentials, a JSON Service Account Key or an Access Token. These are not required if you are running the googlecompute Packer builder on Google Cloud with a properly-configured Google Service Account.
 
-If you run the googlecompute Packer builder locally on your workstation, you will need to install the Google Cloud SDK and authenticate using User Application Default Credentials. You don't need to specify an account file if you are using this method. Your user must have at least below roles to use Packer succesfully.
+- If you run the googlecompute Packer builder locally on your workstation, you will need to install the Google Cloud SDK and authenticate using User Application Default Credentials. You don't need to specify an account file if you are using this method. Your user must have at least below roles to use Packer succesfully.
 
 1. Compute Instance Admin (v1)
 2. Service Account User roles
+
+- Make sure to open your firewall to allow ssh connection.
 
 ## Execution
 To execute the packer commands for building the image, go to command prompt and switch to the directory conatinaing all the packer config files and run the following commands:
