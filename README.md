@@ -9,7 +9,7 @@ Resources in this repository are meant for use with Packer (check the version us
 
 - [packer](https://releases.hashicorp.com/packer/) >= 1.8.5
 
-**Reference:**
+**Download Source:**
 - https://releases.hashicorp.com/packer/
 - https://developer.hashicorp.com/packer/downloads
 
@@ -28,6 +28,14 @@ To install packer manually, download the packer binary from "https://releases.ha
     packer version
 ```
 
+### Permissions
+Authenticating with Google Cloud services requires either a User Application Default Credentials, a JSON Service Account Key or an Access Token. These are not required if you are running the googlecompute Packer builder on Google Cloud with a properly-configured Google Service Account.
+
+If you run the googlecompute Packer builder locally on your workstation, you will need to install the Google Cloud SDK and authenticate using User Application Default Credentials. You don't need to specify an account file if you are using this method. Your user must have at least below roles to use Packer succesfully.
+
+1. Compute Instance Admin (v1)
+2. Service Account User roles
+
 ## Execution
 To execute the packer commands for building the image, go to command prompt and switch to the directory conatinaing all the packer config files and run the following commands:
 
@@ -37,5 +45,12 @@ To execute the packer commands for building the image, go to command prompt and 
 -   [Optional] `packer fmt .`
     -   The packer fmt Packer command is used to format HCL2 configuration files to a canonical format and style.
 
+-   [Optional] `packer validate .`
+    -   The packer validate Packer command is used to validate the syntax and configuration of a template. The command will return a zero exit status on success, and a non-zero exit status on failure.
+
 -   [Required] `packer build .`
-    -   The packer build command takes a template for a folder path conatining templates and runs all the builds within it. The various builds specified within a template are executed in parallel, unless otherwise specified. 
+    -   The packer build command takes a template (or) a folder path containing templates and runs all the builds within it. The various builds specified within a template are executed in parallel, unless otherwise specified.
+
+## References
+- https://developer.hashicorp.com/packer/docs
+- https://developer.hashicorp.com/packer/plugins/builders/googlecompute
