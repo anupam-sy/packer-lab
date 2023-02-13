@@ -1,4 +1,4 @@
-# packer-lab
+# Packer Lab
 This repository contains packer related content like packer files and other documents to implement images as a code.
 
 ## Prerequisites
@@ -28,7 +28,7 @@ To install packer manually, download the packer binary from "https://releases.ha
     packer version
 ```
 
-## Execution:
+## Execution
 To execute the packer commands for building the image, go to command prompt and switch to the directory conatinaing all the packer config files and run the following commands:
 
 -   [Required] `packer init`
