@@ -1,4 +1,4 @@
-# Packer Installation
+# Packer
 Packer is a free and open source tool for creating golden images for multiple platforms from a single source configuration. This document will guide you to install Packer to build images from code.
 
 ## Packer Installation
