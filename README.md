@@ -51,6 +51,11 @@ To execute the packer commands for building the image, go to command prompt and 
 -   [Required] `packer build .`
     -   The packer build command takes a template (or) a folder path containing templates and runs all the builds within it. The various builds specified within a template are executed in parallel, unless otherwise specified.
 
+**Note:** 
+1. To pass the variables values, it is conveninet as well as recommend to use standard variable definition files. Variable definition filenames ends with either .pkrvars.hcl or .pkrvars.json. You can then specify that file on the command line with -var-file flag.
+
+2. Any variable definition file name(s) ending in .auto.pkrvars.hcl will be loaded automatically without the need to pass them explicitly.
+
 ## References
 - https://developer.hashicorp.com/packer/docs
 - https://developer.hashicorp.com/packer/plugins/builders/googlecompute
